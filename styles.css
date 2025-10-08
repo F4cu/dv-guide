@@ -114,14 +114,6 @@ header {
     outline-offset: 2px;
 }
 
-.accordion-button {
-    transition: all 0.3s;
-}
-
-.accordion-button[aria-expanded="true"] .plus {
-    transform: rotate(45deg);
-}
-
 .accordion-content {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
@@ -129,7 +121,7 @@ header {
 }
 
 .accordion-content.active {
-    max-height: 145px;
+    max-height: 500px;
 }
 
 .card-image {
