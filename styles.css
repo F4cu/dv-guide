@@ -6,12 +6,17 @@
   --blue-500: #1C72CA;
   --blue-600: #16599E;
   --blue-700: #0F3F70;
+  --neutral-100: #EDEDED;
+  --neutral-200: #C2C2C2;
+  --neutral-500: #686868;
   --black: #0F0F0F;
   --white: #ffffff;
-  --neutral-200: #cccccc;
 
   /* Semantic alias */
-  --color-primary: var(--blue-500);
+  --color-primary: var(--blue-600);
+  --accent-green: #65B888;
+  --accent-red: #DE4E19;
+  --accent-yellow: #F2C60F;
   --color-text: var(--black);
   --color-link: var(--blue-600);
   --color-text-inverted: var(--white);
@@ -23,8 +28,8 @@
   --color-border-inverted: rgba(255,255,255, 0.45);
   --color-icon: var(--blue-500);
   --color-icon-inverted: var(--white);
-  --color-button: var(--blue-500);
-  --color-button-hover: var(--blue-600);
+  --color-button: var(--color-primary);
+  --color-button-hover: var(--blue-700);
 }
 
 body {
@@ -146,7 +151,7 @@ header {
 
 .border-subtle {
     border: 1px solid;
-    border-color: var(--color-border);
+    border-color: var(--neutral-200);
 }
 
 footer .text-muted {
