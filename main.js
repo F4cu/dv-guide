@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  console.log("✅ Sidebar marker script loaded");
+
+  // Startseite
   const accordionButtons = document.querySelectorAll(".accordion-button");
 
   accordionButtons.forEach((button) => {
@@ -52,4 +56,48 @@ document.addEventListener("DOMContentLoaded", () => {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   }
+
+  // Select all h3 headings that label their parent sections
+  const headings = document.querySelectorAll("main section > h3[id]");
+  const navLinks = document.querySelectorAll("aside nav a[href^='#']");
+
+  function clearArrows() {
+    navLinks.forEach((link) => {
+      link.textContent = link.textContent.replace("→", "").trim();
+      link.classList.remove("active");
+    });
+  }
+
+  function setActiveBySectionId(sectionId) {
+    clearArrows();
+    const activeLink = document.querySelector(`aside nav a[href="#${sectionId}"]`);
+    if (activeLink) {
+      activeLink.textContent = `${activeLink.textContent.trim()} →`;
+      activeLink.classList.add("active");
+    }
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+      if (visible.length > 0) {
+        const heading = visible[0].target;
+        const section = heading.closest("section[id]");
+        if (section) {
+          setActiveBySectionId(section.id);
+        }
+      }
+    },
+    {
+      root: null,
+      threshold: 0.3,
+      rootMargin: "0px 0px -50% 0px",
+    }
+  );
+
+  headings.forEach((h3) => observer.observe(h3));
+
 });

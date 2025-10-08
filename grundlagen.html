@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sticky Sidebar Example</title>
+    <title>Grundlagen – Barrierefreie Datenvisualisierung</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body class="bg-blue-900 text-gray-900 min-h-screen">
-    <header role="banner" class="bg-white border-b border-gray-200">
+<body id="grundlagen" class="bg-white text-gray-900 min-h-screen">
+    <header role="banner" class="bg-white border-b border-primary">
         <nav class="px-4 md:px-8 py-4" role="navigation" aria-label="Hauptnavigation">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
@@ -42,82 +47,171 @@
             </div>
         </nav>
     </header>
+    
     <div class="flex">
         <!-- Sidebar -->
-        <aside class="w-64 bg-blue-100 p-8 sticky top-0 h-screen overflow-y-auto">
-            <nav aria-label="Seiten Navigation" class="text-sm mb-8">
-                <div class="font-bold mb-2"><a href="#grundlegende-diagramme">Grundlegende Diagramme</a></div>
-                <ul class="mb-4 space-y-1">
-                <li><a href="#balkendiagramm" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">Balkendiagramm</a></li>
-                <li><a href="#linendiagramm" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">Liniendiagramm</a></li>
-                <li><a href="#kreisdiagramm" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">Kreisdiagramm</a></li>
-                <li><a href="#histogramm" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">Histogramm</a></li>
-                </ul>
-                <div class="font-bold mb-2"><a href="diagrammwahl-prinzipen">Diagrammwahl Prinzipen</a></div>
-                <ul class="mb-4 space-y-1">
-                <li><a href="#ziel" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">Ziel</a></li>
-                <li><a href="#skalenniveau" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">Skalenniveau</a></li>
-                <li><a href="#kreisdiagramm-2" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">Kreisdiagramm</a></li>
-                <li><a href="#lesbarkeit" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">Lesbarkeit</a></li>
-                </ul>
-                <div class="font-bold mb-2"><a href="#glossar">Glossar</a></div>
-                <ul class="space-y-1">
-                <li><a href="#a-f" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">A–F</a></li>
-                <li><a href="#g-l" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">G–L</a></li>
-                <li><a href="#m-r" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">M–R</a></li>
-                <li><a href="#s-z" class="block hover:underline focus:underline text-blue-900 focus:outline focus:outline-2 focus:outline-blue-800">S–Z</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <!-- Main content, scrollable -->
-        <main id="main-content" class="flex-1 bg-white p-8">
-            <section id="grundlegende-diagramme" aria-labelledby="" class="border-t border-gray-300 pt-6">
-                <h2 id="ziel-title" class="font-bold mb-3">Diagrammwahl Prinzipen</h2>
-                <h3 class="font-semibold mb-2">Balkendiagramme</h3>
-                
-                Balkendiagramme sind vielseitige Werkzeuge zur Visualisierung von Daten, wobei jede Variante einem bestimmten Zweck dient. Hier eine kurze Übersicht über die wichtigsten Typen
+        <aside
+        class="w-[300px] bg-light-blue p-8 sticky top-0 h-screen overflow-y-auto"
+        aria-label="Seiten Navigation"
+        >
+        <nav class="text-sm mb-8">
+            <div class="font-bold mb-2">
+                <a href="#grundlegende-diagramme">Grundlegende Diagramme</a>
+            </div>
+            <ul class="mb-4 space-y-1">
+                <li><a href="#balkendiagramm" class="">Balkendiagramm</a></li>
+                <li><a href="#linendiagramm">Liniendiagramm</a></li>
+                <li><a href="#kreisdiagramm">Kreisdiagramm</a></li>
+                <li><a href="#streudiagramm">Streudiagramm</a></li>
+            </ul>
+            
+            <div class="font-bold mb-2">
+                <a href="#diagrammwahl-prinzipen">Diagrammwahl Prinzipen</a>
+            </div>
+            <ul class="mb-4 space-y-1">
+                <li><a href="#ziel">Überlegungen</a></li>
+                <li><a href="#skalenniveau">Skalenniveau</a></li>
+                <li><a href="#lesbarkeit">Lesbarkeit</a></li>
+            </ul>
+            
+            <div class="font-bold mb-2"><a href="#glossar">Glossar</a></div>
+            <ul class="space-y-1">
+                <li><a href="#a-f">A–F</a></li>
+                <li><a href="#g-l">G–L</a></li>
+                <li><a href="#m-r">M–R</a></li>
+                <li><a href="#s-z">S–Z</a></li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <!-- Main content -->
+    <main id="main-content" class="flex-1 bg-white px-12 max-w-3xl" role="main">
+        <section
+        id="grundlegende-diagramme"
+        aria-labelledby="grundlegende-diagramme-heading"
+        class="pt-6"
+        >
+        <h1 class="text-2xl sm:text-3xl font-bold mb-8">Grundlagen</h1>
+        
+        <h2 id="grundlegende-diagramme-heading" class="font-bold text-xl sm:text-2xl mb-4">
+            Grundlegende Diagramme
+        </h2>
+        
+        <section id="balkendiagramm" aria-labelledby="balkendiagramm-heading">
+            <h3 id="balkendiagramm-heading" class="font-bold text-xl mb-2">
+                Balkendiagramme
+            </h3>
+            <p class="mb-4">Balkendiagramme sind vielseitige Werkzeuge zur Visualisierung von Daten, wobei jede Variante einem bestimmten Zweck dient. Hier eine kurze Übersicht über die wichtigsten Typen:</p>
+            
+            <ul class="space-y-2 list-disc pl-12 ml-4 mb-4">
+                <li><span class="font-semibold">Vertikale Balkendiagramme:</span> Vergleichen Sie Kategorien mit aufrechten Balken.</li>
+                <li><span class="font-semibold">Horizontale Balkendiagramme:</span> Vergleichen Sie Kategorien mit seitlichen Balken.</li>
+                <li><span class="font-semibold">Gruppierte Balkendiagramme:</span> Vergleichen Sie mehrere Gruppen innerhalb von Kategorien.</li>
+                <li><span class="font-semibold">Gestapelte Balkendiagramme:</span> Zeigen Teile eines Ganzen innerhalb jeder Kategorie.</li>
+            </ul>
+            
+            <img src="images/data-visualization-types-bars.png" alt="" class="mb-8">
+        </section>
+        
+        <section id="linendiagramm" aria-labelledby="linendiagramm-heading">
+            <h3 id="linendiagramm-heading" class="font-bold text-xl mb-2">
+                Liniendiagramme
+            </h3>
+            <p class="mb-4">Liniendiagramme zeigen Trends und Veränderungen im Laufe der Zeit auf und bieten eine klare visuelle Darstellung:</p>
+            
+            <ul class="space-y-2 list-disc pl-12 ml-4 mb-4">
+                <li><span class="font-semibold">Einfache Liniendiagramme:</span> Verbinden Sie Datenpunkte, um Trends zu veranschaulichen, z. B. Aktienkurse oder Temperaturveränderungen.</li>
+                <li><span class="font-semibold">Mehrere Liniendiagramme:</span> Vergleichen Sie die Trends verschiedener Variablen im selben Diagramm und zeigen Sie deren Beziehungen.</li>
+                <li><span class="font-semibold">Flächendiagramme:</span> Betonen Sie die kumulierte Summe eines Wertes im Laufe der Zeit, indem Sie den Raum unter der Linie ausfüllen.</li>
+            </ul>
+            
+            <img src="images/data-visualization-types-line.png" alt="" class="mb-8">
+        </section>
+        
+        <section id="kreisdiagramm" aria-labelledby="kreisdiagramm-heading">
+            <h3 id="kreisdiagramm-heading" class="font-bold text-xl mb-2">
+                Kreisdiagramme
+            </h3>
+            <p class="mb-4">Tortendiagramme zeigen effektiv Teile eines Ganzen an und bieten eine klare Darstellung der Proportionen:</p>
+            <ul class="space-y-2 list-disc pl-12 ml-4 mb-4">
+                <li><span class="font-semibold">Standard-Tortendiagramme:</span> Unterteilen Sie einen Kreis in Segmente, von denen jedes einen Teil des Ganzen darstellt, ideal für eine kleine Anzahl von Kategorien.</li>
+                <li><span class="font-semibold">Donut-Tafeln:</span> Eine Variante mit einem Loch in der Mitte, das zusätzliche Informationen oder eine stilvolle Präsentation ermöglicht.</li>
+            </ul>
+            
+            <img src="images/data-visualization-types-pie.png" alt="" class="mb-8">
+        </section>
+        
+        <section id="streudiagramm" aria-labelledby="streudiagramm-heading">
+            <h3 id="streudiagramm-heading" class="font-bold text-xl mb-2">
+                Streudiagramme
+            </h3>
+            <p class="mb-4">Streudiagramme helfen dabei, Beziehungen zwischen Variablen aufzudecken und fungieren als visuelle Datendetektive:</p>
+            <ul class="space-y-2 list-disc pl-12 ml-4 mb-4">
+                <li><span class="font-semibold">Grundlegende Streudiagramme:</span> Zeichnen Sie Datenpunkte auf, um die Korrelation zwischen zwei Variablen zu zeigen.</li>
+                <li><span class="font-semibold">Blasendiagramme:</span> Erweitern Sie Streudiagramme, indem Sie die Größe jedes Punktes zur Darstellung einer dritten Variable verwenden.</li>
+            </ul>
+            
+            <img src="images/data-visualization-types-scatter-plot.png" alt="" class="mb-8">
+        </section>
+    </section>
+    
+    <section
+    id="diagrammwahl-prinzipen"
+    aria-labelledby="diagrammwahl-heading"
+    class="border-t border-gray-300 pt-6"
+    >
+    <h2 id="diagrammwahl-heading" class="font-bold text-xl sm:text-2xl mb-4">
+        Diagrammwahl Prinzipen
+    </h2>
+    <section id="ziel" aria-labelledby="ziel-heading">
+        <h3 id="ziel-heading" class="font-bold text-xl mb-2">Überlegungen</h3>
+        <p class="mb-4"><span class="font-semibold">Verstehen Sie Ihre Daten:</span> Bevor Sie eine Visualisierung erstellen, müssen Sie die Natur Ihrer Daten analysieren. Arbeiten Sie mit Mengen oder Eigenschaften? Welche Erkenntnisse möchten Sie vermitteln? Die Art Ihrer Daten bestimmt die beste Darstellungsform: Zeitbezogene Informationen eignen sich hervorragend für Liniendiagramme, während Streudiagramme Zusammenhänge zwischen verschiedenen Variablen aufzeigen können.</p>
+        
+        <p class="mb-4"><span class="font-semibold">Definieren Sie Ihr Ziel:</span> Überlegen Sie sich genau, welche zentrale Aussage Ihre Visualisierung transportieren soll. Möchten Sie Anteile eines Gesamtwerts verdeutlichen? Dann bietet sich ein Tortendiagramm an. Geht es hingegen um den direkten Vergleich verschiedener Kategorien, ist ein Balkendiagramm oft die wirkungsvollere Wahl.</p>
+        
+        <p class="mb-4"><span class="font-semibold">Berücksichtigen Sie Ihre Zielgruppe:</span> Passen Sie die Komplexität Ihrer Visualisierung an Ihr Publikum an. Während technische Fachkräfte auch detaillierte und komplexe Darstellungen verarbeiten können, bevorzugen Entscheidungsträger in der Regel klare und übersichtliche Visualisierungen. Unabhängig von Ihrer Zielgruppe gilt: Jedes Element sollte einen erkennbaren Zweck haben und zur Verständlichkeit beitragen.</p>
+        
+        <p class="mb-4"><span class="font-semibold">Nutzen Sie interaktive Möglichkeiten:</span> Bei umfangreichen Datensätzen sollten Sie interaktive Visualisierungen in Betracht ziehen. Professionelle Tools wie Tableau oder Power BI ermöglichen es Ihren Nutzern, die Daten selbstständig zu erkunden und individuelle Einblicke zu gewinnen.</p>
+    </section>
+    
+    <section id="skalenniveau" aria-labelledby="skalenniveau-heading">
+        <h3 id="skalenniveau-heading" class="font-bold text-xl mb-2">
+            Skalenniveau
+        </h3>
+        <p class="mb-4"><span class="font-semibold">Beachten Sie das Skalenniveau:</span> Das Skalenniveau Ihrer Daten ist ein fundamentaler Faktor bei der Auswahl geeigneter Diagrammtypen. Nominale Daten wie Kategorien oder Namen eignen sich für Balken- und Tortendiagramme, ordinale Daten mit natürlicher Reihenfolge für geordnete Balkendiagramme. Intervallskalierte Daten mit gleichen Abständen aber ohne natürlichen Nullpunkt, wie Temperaturwerte, erlauben Liniendiagramme und Zeitreihenanalysen. Verhältnisskalierte Daten mit echtem Nullpunkt ermöglichen zusätzlich aussagekräftige Verhältnisberechnungen und Prozentuierungen. Die Missachtung des Skalenniveaus führt zu irreführenden oder bedeutungslosen Visualisierungen.</p>
+    </section>
+    
+    <section id="lesbarkeit" aria-labelledby="lesbarkeit-heading">
+        <h3 id="lesbarkeit-heading" class="font-bold text-xl mb-2">Lesbarkeit</h3>
+        <p class="mb-4"><span class="font-semibold">Optimieren Sie die Lesbarkeit:</span> Eine durchdachte visuelle Gestaltung ist entscheidend für die Zugänglichkeit und Wirksamkeit Ihrer Diagramme. Verwenden Sie klare, gut lesbare Beschriftungen mit ausreichender Schriftgröße für Achsen, Legenden und Datenpunkte. Achten Sie auf ausreichenden Farbkontrast, insbesondere zwischen Hintergrund und Vordergrund sowie zwischen verschiedenen Datenreihen. Eine bewusst gestaltete visuelle Hierarchie lenkt den Blick auf die wichtigsten Informationen: Größere oder fettere Elemente für Hauptaussagen, dezentere Gestaltung für Sekundärinformationen. Vermeiden Sie visuelle Überfrachtung durch zu viele Farben, Muster oder unnötige dekorative Elemente, die vom Wesentlichen ablenken.</p>
+    </section>
+</section>
 
-                <ul class="space-y-2 list-disc list-inside">
-                    <li><span class="font-semibold">Vertikale Balkendiagramme:</span> Vergleichen Sie Kategorien mit aufrechten Balken.</li>
-                    <li><span class="font-semibold">Horizontale Balkendiagramme:</span> Vergleichen Sie Kategorien mit seitlichen Balken.</li>
-                    <li><span class="font-semibold">Gruppierte Balkendiagramme:</span> Vergleichen Sie mehrere Gruppen innerhalb von Kategorien.</li>
-                    <li><span class="font-semibold">Gestapelte Balkendiagramme:</span> Zeigen Teile eines Ganzen innerhalb jeder Kategorie.</li>
-                </ul>
-
-                <img src="images/data-visualization-types-bars.png" alt="">
-
-                <h3 class="font-semibold mb-2">Liniendiagramme</h3>
-                <p>Liniendiagramme zeigen Trends und Veränderungen im Laufe der Zeit auf und bieten eine klare visuelle Darstellung:</p>
-
-                <ul class="space-y-2 list-disc list-inside">
-                    <li><span class="font-semibold">Einfache Liniendiagramme:</span> Verbinden Sie Datenpunkte, um Trends zu veranschaulichen, z. B. Aktienkurse oder Temperaturveränderungen.</li>
-                    <li><span class="font-semibold">Mehrere Liniendiagramme:</span> Vergleichen Sie die Trends verschiedener Variablen im selben Diagramm und zeigen Sie deren Beziehungen.</li>
-                    <li><span class="font-semibold">Flächendiagramme:</span> Betonen Sie die kumulierte Summe eines Wertes im Laufe der Zeit, indem Sie den Raum unter der Linie ausfüllen.</li>
-                </ul>
-
-                <img src="images/data-visualization-types-line.png" alt="">
-
-                <h3 class="font-semibold mb-2">Kreisdiagramme</h3>
-                <p>Tortendiagramme zeigen effektiv Teile eines Ganzen an und bieten eine klare Darstellung der Proportionen:</p>
-                <ul class="space-y-2 list-disc list-inside">
-                    <li><span class="font-semibold">Standard-Tortendiagramme:</span> Unterteilen Sie einen Kreis in Segmente, von denen jedes einen Teil des Ganzen darstellt, ideal für eine kleine Anzahl von Kategorien.</li>
-                    <li><span class="font-semibold">Donut-Tafeln:</span> Eine Variante mit einem Loch in der Mitte, das zusätzliche Informationen oder eine stilvolle Präsentation ermöglicht.</li>
-                </ul>
-
-                <img src="images/data-visualization-types-pie.png" alt="">
-
-                <h3 class="font-semibold mb-2">Streudiagramme</h3>
-                <p>Streudiagramme helfen dabei, Beziehungen zwischen Variablen aufzudecken und fungieren als visuelle Datendetektive:</p>
-                <ul class="space-y-2 list-disc list-inside">
-                    <li><span class="font-semibold">Grundlegende Streudiagramme:</span> Zeichnen Sie Datenpunkte auf, um die Korrelation zwischen zwei Variablen zu zeigen.</li>
-                    <li><span class="font-semibold">Blasendiagramme:</span> Erweitern Sie Streudiagramme, indem Sie die Größe jedes Punktes zur Darstellung einer dritten Variable verwenden.</li>
-                </ul>
-
-                <img src="images/data-visualization-types-scatter-plot.png" alt="">
-
-            </section>
-            <!-- More content sections ... -->
-        </main>
-    </div>
+<section id="glossar" aria-labelledby="glossar-heading" class="border-t border-gray-300 pt-6 mt-8">
+    <h2 id="glossar-heading" class="font-bold text-xl sm:text-2xl mb-4">Glossar</h2>
+    
+    <section id="a-f" aria-labelledby="a-f-heading">
+        <h3 id="a-f-heading" class="font-bold text-xl mb-2">A–F</h3>
+        <p class="mb-4">Begriffe von A bis F.</p>
+    </section>
+    
+    <section id="g-l" aria-labelledby="g-l-heading">
+        <h3 id="g-l-heading" class="font-bold text-xl mb-2">G–L</h3>
+        <p class="mb-4">Begriffe von G bis L.</p>
+    </section>
+    
+    <section id="m-r" aria-labelledby="m-r-heading">
+        <h3 id="m-r-heading" class="font-bold text-xl mb-2">M–R</h3>
+        <p class="mb-4">Begriffe von M bis R.</p>
+    </section>
+    
+    <section id="s-z" aria-labelledby="s-z-heading">
+        <h3 id="s-z-heading" class="font-bold text-xl mb-2">S–Z</h3>
+        <p class="mb-4">Begriffe von S bis Z.</p>
+    </section>
+</section>
+</main>
+</div>
+<script src="main.js"></script>
 </body>
 </html>

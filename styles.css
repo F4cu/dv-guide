@@ -18,7 +18,7 @@
   --accent-red: #DE4E19;
   --accent-yellow: #F2C60F;
   --color-text: var(--black);
-  --color-link: var(--blue-600);
+  --color-link: var(--blue-700);
   --color-text-inverted: var(--white);
   --color-text-inverted-muted: var(--blue-200);
   
@@ -38,20 +38,22 @@ body {
     font-weight: 400;
     font-style: normal;
     color: var(--color-text);
-}
-
-p, h1, h2 {
-    letter-spacing: 0.06rem;
-    word-spacing: 0.08rem;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.1rem;
 }
 
 header {
     height: 60px;
 }
 
-.nav-items {
+.nav-items a {
     font-weight: 700;
     color: var(--color-link);
+}
+
+aside nav a {
+    color: var(--color-link);
+    font-size: 1rem;
 }
 
 .nav-items li {
