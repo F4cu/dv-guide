@@ -98,4 +98,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   headings.forEach((h3) => observer.observe(h3));
 
+  // Dark mode toggle
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const iconSun = document.getElementById('icon-sun');
+  const iconMoon = document.getElementById('icon-moon');
+
+  // Apply saved theme or default to light
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  html.setAttribute('data-theme', savedTheme);
+  updateToggle(savedTheme);
+
+  toggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateToggle(newTheme);
+  });
+
+  function updateToggle(theme) {
+    if (theme === 'dark') {
+      toggle.setAttribute('aria-label', 'Hellmodus einschalten');
+      toggle.setAttribute('title', 'Hellmodus einschalten');
+      iconSun.classList.add('hidden');
+      iconMoon.classList.remove('hidden');
+    } else {
+      toggle.setAttribute('aria-label', 'Dunkelmodus einschalten');
+      toggle.setAttribute('title', 'Dunkelmodus einschalten');
+      iconMoon.classList.add('hidden');
+      iconSun.classList.remove('hidden');
+    }
+  }
+
 });

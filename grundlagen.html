@@ -7,46 +7,88 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
-<body id="grundlagen" class="bg-white text-gray-900 min-h-screen">
+<body id="grundlagen"  data-theme="light" class="min-h-screen">
     <a href="#main-content" class="absolute left-0 top-0 bg-black text-white py-2 px-4 z-50 transform -translate-y-full focus:translate-y-0 transition">Zum Hauptinhalt springen</a>
-    <header role="banner" class="bg-white border-b border-primary md:h-16">
-        <nav class="px-4 md:px-8 py-4" role="navigation" aria-label="Hauptnavigation">
-            <div class="flex items-center justify-between">
+    <header role="banner" class="bg-container border-b border-primary h-16">
+        <nav class="container-custom h-full px-4 md:px-8" role="navigation" aria-label="Hauptnavigation">
+            <div class="flex items-center justify-between h-full">
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-2" aria-label="DV Guide Startseite">
+                <a href="index.html" class="logo flex items-center gap-2 py-2 pr-2" aria-label="DV Guide Startseite">
                     <svg width="105" height="25" viewBox="0 0 105 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M54.6438 19.6342C53.5703 19.6342 52.5715 19.4508 51.6475 19.0839C50.7234 18.7034 49.9081 18.1802 49.2014 17.5143C48.5084 16.8349 47.9648 16.0535 47.5707 15.1702C47.1902 14.2733 47 13.3085 47 12.2757C47 11.243 47.1902 10.2849 47.5707 9.40165C47.9648 8.50477 48.5016 7.7234 49.181 7.05754C49.8741 6.37809 50.6826 5.85491 51.6067 5.488C52.5307 5.10751 53.5227 4.91726 54.5827 4.91726C55.7921 4.91726 56.9336 5.16866 58.0071 5.67145C59.0807 6.16066 59.9572 6.84011 60.6366 7.70981L58.1702 9.93163C57.7082 9.33371 57.1714 8.88527 56.5599 8.58631C55.962 8.28735 55.3029 8.13787 54.5827 8.13787C54.012 8.13787 53.482 8.24658 52.9928 8.46401C52.5172 8.66784 52.0959 8.95321 51.729 9.32012C51.3757 9.68702 51.0971 10.1219 50.8933 10.6247C50.703 11.1275 50.6079 11.6778 50.6079 12.2757C50.6079 12.8737 50.7098 13.4308 50.9136 13.9472C51.1175 14.45 51.4029 14.8916 51.7698 15.2721C52.1503 15.639 52.5851 15.9312 53.0743 16.1486C53.5771 16.3525 54.1207 16.4544 54.705 16.4544C55.2621 16.4544 55.7649 16.3593 56.2134 16.169C56.6754 15.9788 57.0695 15.7138 57.3956 15.374C57.7218 15.0343 57.9528 14.647 58.0887 14.2122H54.2362V11.175H61.88V12.1942C61.88 13.2677 61.6966 14.2597 61.3297 15.1702C60.9764 16.0671 60.4736 16.8553 59.8213 17.5347C59.1826 18.2006 58.4216 18.717 57.5383 19.0839C56.655 19.4508 55.6902 19.6342 54.6438 19.6342Z"
-                            fill="#16599E" />
+                            fill="currentColor" />
                         <path
                             d="M67.5854 19.6138C66.7428 19.6138 65.9954 19.4304 65.3432 19.0635C64.7045 18.6966 64.2017 18.187 63.8348 17.5347C63.4679 16.8688 63.2844 16.1146 63.2844 15.2721V8.62708H66.5866V14.8237C66.5866 15.408 66.7632 15.8836 67.1165 16.2505C67.4834 16.6039 67.9591 16.7805 68.5434 16.7805C68.9646 16.7805 69.3383 16.7058 69.6645 16.5563C69.9906 16.4068 70.2624 16.1962 70.4798 15.9244V8.62708H73.782V19.41H70.4798V18.6762C69.6645 19.3013 68.6997 19.6138 67.5854 19.6138Z"
-                            fill="#16599E" />
+                            fill="currentColor" />
                         <path
                             d="M75.6232 19.41V8.62708H78.9253V19.41H75.6232ZM77.2743 7.62828C76.7715 7.62828 76.3434 7.45162 75.9901 7.09831C75.6368 6.74499 75.4601 6.31693 75.4601 5.81414C75.4601 5.31134 75.6368 4.88329 75.9901 4.52997C76.3434 4.17666 76.7715 4 77.2743 4C77.777 4 78.2051 4.17666 78.5584 4.52997C78.9117 4.88329 79.0884 5.31134 79.0884 5.81414C79.0884 6.31693 78.9117 6.74499 78.5584 7.09831C78.2051 7.45162 77.777 7.62828 77.2743 7.62828Z"
-                            fill="#16599E" />
+                            fill="currentColor" />
                         <path
                             d="M85.7685 19.5527C84.7493 19.5527 83.8184 19.3081 82.9759 18.8189C82.147 18.3161 81.4879 17.6502 80.9987 16.8213C80.5095 15.9788 80.2649 15.0411 80.2649 14.0083C80.2649 12.9756 80.5095 12.0447 80.9987 11.2158C81.5015 10.3733 82.1742 9.70741 83.0167 9.2182C83.8728 8.72899 84.824 8.48439 85.8704 8.48439C86.3732 8.48439 86.8556 8.54554 87.3176 8.66784C87.7797 8.79014 88.2145 8.9668 88.6222 9.19782V5.14148L91.9243 4.63189V19.41H88.6629V18.615C87.8068 19.2401 86.842 19.5527 85.7685 19.5527ZM86.3392 16.7397C86.8012 16.7397 87.2225 16.6718 87.603 16.5359C87.9835 16.3864 88.3232 16.169 88.6222 15.8836V12.1127C88.3368 11.8409 87.9971 11.6371 87.603 11.5012C87.2089 11.3517 86.7877 11.2769 86.3392 11.2769C85.8092 11.2769 85.3268 11.3992 84.892 11.6438C84.4707 11.8749 84.131 12.201 83.8728 12.6223C83.6282 13.0299 83.5059 13.492 83.5059 14.0083C83.5059 14.5247 83.6282 14.9936 83.8728 15.4148C84.131 15.8225 84.4707 16.1486 84.892 16.3932C85.3268 16.6242 85.8092 16.7397 86.3392 16.7397Z"
-                            fill="#16599E" />
+                            fill="currentColor" />
                         <path
                             d="M99.149 19.6138C98.0483 19.6138 97.0495 19.3692 96.1526 18.88C95.2694 18.3772 94.5695 17.7046 94.0531 16.862C93.5367 16.0195 93.2786 15.0751 93.2786 14.0287C93.2786 12.9824 93.5232 12.0379 94.0124 11.1954C94.5152 10.3529 95.1946 9.68702 96.0507 9.19782C96.9068 8.69502 97.8581 8.44362 98.9044 8.44362C99.9644 8.44362 100.902 8.70182 101.717 9.2182C102.533 9.721 103.171 10.414 103.633 11.2973C104.109 12.1806 104.347 13.193 104.347 14.3345V15.1498H96.6622C96.8117 15.4896 97.0088 15.7885 97.2534 16.0467C97.5115 16.3049 97.8173 16.5087 98.1706 16.6582C98.5239 16.7941 98.9044 16.862 99.3121 16.862C99.7605 16.862 100.168 16.7941 100.535 16.6582C100.902 16.5087 101.215 16.3049 101.473 16.0467L103.654 17.9831C102.974 18.5539 102.275 18.9684 101.554 19.2265C100.848 19.4847 100.046 19.6138 99.149 19.6138ZM96.6011 12.8465H101.106C100.997 12.4932 100.827 12.1942 100.596 11.9496C100.379 11.6914 100.121 11.4944 99.8217 11.3585C99.5227 11.209 99.1966 11.1343 98.8433 11.1343C98.4764 11.1343 98.1434 11.2022 97.8445 11.3381C97.5455 11.474 97.2873 11.671 97.0699 11.9292C96.8661 12.1738 96.7098 12.4796 96.6011 12.8465Z"
-                            fill="#16599E" />
+                            fill="currentColor" />
                         <path
                             d="M39.8716 24.101H0.942871V0.0697632H39.8716V24.101ZM27.6177 19.143L35.4116 5.02289H19.8237L27.6177 19.143ZM5.86963 5.02582V19.0258H11.8696L12.2134 19.018C13.0151 18.9786 13.8051 18.8014 14.5483 18.4936C15.3976 18.1418 16.1698 17.626 16.8198 16.976C17.4697 16.326 17.9847 15.5537 18.3364 14.7045C18.6881 13.8553 18.8696 12.945 18.8696 12.0258C18.8696 11.1067 18.6882 10.1963 18.3364 9.34711C17.9847 8.49811 17.4696 7.72645 16.8198 7.0766C16.1698 6.42659 15.3976 5.9108 14.5483 5.55902C13.6991 5.20726 12.7889 5.02582 11.8696 5.02582H5.86963Z"
-                            fill="#16599E" />
+                            fill="currentColor" />
                     </svg>
                 </a>
-                
+
                 <!-- Desktop Navigation -->
-                <ul class="nav-items hidden md:flex gap-8 list-none m-0 p-0">
-                    <li class="nav-selected"><a href="#grundlagen" class="text-gray-700 hover:text-primary no-underline">Grundlagen</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-primary no-underline">Datenvisualisierungen</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-primary no-underline">Barrierefreiheit</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-primary no-underline">Farbpaletten</a></li>
+                <ul class="nav-items hidden md:flex gap-2 list-none m-0 p-0">
+                <li class="nav-selected">
+                    <a href="grundlagen.html"
+                    class="inline-flex items-center px-3 py-2 no-underline">
+                    Grundlagen
+                    </a>
+                </li>
+                <li>
+                    <a href="#datenvisualisierungen"
+                    class="inline-flex items-center px-3 py-2 no-underline">
+                    Datenvisualisierungen
+                    </a>
+                </li>
+                <li>
+                    <a href="#barrierefreiheit"
+                    class="inline-flex items-center px-3 py-2 no-underline">
+                    Barrierefreiheit
+                    </a>
+                </li>
+                <li>
+                    <a href="#farbpaletten"
+                    class="inline-flex items-center px-3 py-2 no-underline">
+                    Farbpaletten
+                    </a>
+                </li>
                 </ul>
-                
+
+
+                <button
+                    id="theme-toggle"
+                    class="p-2 transition color-icon hidden md:block"
+                    aria-label="Dunkelmodus einschalten"
+                    >
+                    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="none" viewBox="0 0 32 32" class="w-6 h-6">
+                        <path d="M14.625 1.625H17.375V7.375H14.625V1.625ZM14.625 24.625H17.375V30.375H14.625V24.625ZM21.1266 8.92856L25.1924 4.86269L27.137 6.80725L23.0711 10.8731L21.1266 8.92856ZM4.86344 25.1921L8.92931 21.1262L10.8739 23.0708L6.808 27.1367L4.86344 25.1921ZM24.625 14.625H30.375V17.375H24.625V14.625ZM1.625 14.625H7.375V17.375H1.625V14.625ZM21.1268 23.0713L23.0713 21.1267L27.1372 25.1926L25.1927 27.1371L21.1268 23.0713ZM4.86263 6.8075L6.80719 4.86294L10.8731 8.92881L8.9285 10.8733L4.86263 6.8075ZM16 22.375C14.7391 22.375 13.5066 22.0011 12.4582 21.3006C11.4099 20.6001 10.5928 19.6045 10.1103 18.4396C9.62776 17.2747 9.50151 15.9929 9.74749 14.7563C9.99347 13.5197 10.6006 12.3838 11.4922 11.4922C12.3838 10.6006 13.5197 9.99347 14.7563 9.74749C15.9929 9.50151 17.2747 9.62776 18.4396 10.1103C19.6045 10.5928 20.6001 11.4099 21.3006 12.4582C22.0011 13.5066 22.375 14.7391 22.375 16C22.373 17.6901 21.7007 19.3105 20.5056 20.5056C19.3105 21.7007 17.6901 22.373 16 22.375Z"
+                            fill="currentColor" />
+                    </svg>
+
+                    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="none" viewBox="0 0 32 32" class="w-6 h-6">
+                    <path d="M10.4618 9.07696C10.4618 7.30911 10.7216 5.5225 11.3848 4C6.97536 5.91946 4 10.4227 4 15.5382C4 22.4205 9.57946 28 16.4618 28C21.5773 28 26.0805 25.0246 28 20.6152C26.4775 21.2784 24.6893 21.5382 22.923 21.5382C16.0407 21.5382 10.4618 15.9593 10.4618 9.07696Z"
+                        fill="currentColor" />
+                    </svg>
+
+                </button>
+
                 <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn text-primary block md:hidden" aria-label="Menü öffnen" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <button class="mobile-menu-btn text-primary block md:hidden" aria-label="Menü öffnen"
+                    aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -59,7 +101,7 @@
     <div class="flex">
         <!-- Sidebar -->
         <aside
-        class="w-[300px] bg-light-blue p-8 sticky top-0 h-screen overflow-y-auto hidden md:block"
+        class="w-[300px] bg-darker p-8 sticky top-0 h-screen overflow-y-auto hidden md:block"
         aria-label="Seiten Navigation"
         >
         <nav class="text-sm mb-8">
@@ -93,7 +135,7 @@
     </aside>
     
     <!-- Main content -->
-    <main id="main-content" class="flex-1 bg-white px-6 pb-6 md:px-12 max-w-3xl" aria-label="Hauptinhalt">
+    <main id="main-content" class="bg-container flex-1 px-6 pb-6 md:px-12 max-w-3xl" aria-label="Hauptinhalt">
         <section
         id="grundlegende-diagramme"
         aria-labelledby="grundlegende-diagramme-heading"
@@ -109,13 +151,13 @@
             <h3 id="balkendiagramm-heading" class="font-bold text-xl mb-2">
                 Balkendiagramme
             </h3>
-            <p class="mb-4">Balkendiagramme sind vielseitige Werkzeuge zur Visualisierung von Daten, wobei jede Variante einem bestimmten Zweck dient. Hier eine kurze Übersicht über die wichtigsten Typen:</p>
+            <p class="mb-4 text-muted">Balkendiagramme sind vielseitige Werkzeuge zur Visualisierung von Daten, wobei jede Variante einem bestimmten Zweck dient. Hier eine kurze Übersicht über die wichtigsten Typen:</p>
             
             <ul class="space-y-2 list-disc pl-12 ml-4 mb-4">
-                <li><span class="font-semibold">Vertikale Balkendiagramme:</span> Vergleichen Sie Kategorien mit aufrechten Balken.</li>
-                <li><span class="font-semibold">Horizontale Balkendiagramme:</span> Vergleichen Sie Kategorien mit seitlichen Balken.</li>
-                <li><span class="font-semibold">Gruppierte Balkendiagramme:</span> Vergleichen Sie mehrere Gruppen innerhalb von Kategorien.</li>
-                <li><span class="font-semibold">Gestapelte Balkendiagramme:</span> Zeigen Teile eines Ganzen innerhalb jeder Kategorie.</li>
+                <li class="text-muted"><span class="font-semibold">Vertikale Balkendiagramme:</span> Vergleichen Sie Kategorien mit aufrechten Balken.</li>
+                <li class="text-muted"><span class="font-semibold">Horizontale Balkendiagramme:</span> Vergleichen Sie Kategorien mit seitlichen Balken.</li>
+                <li class="text-muted"><span class="font-semibold">Gruppierte Balkendiagramme:</span> Vergleichen Sie mehrere Gruppen innerhalb von Kategorien.</li>
+                <li class="text-muted"><span class="font-semibold">Gestapelte Balkendiagramme:</span> Zeigen Teile eines Ganzen innerhalb jeder Kategorie.</li>
             </ul>
             
             <img src="images/data-visualization-types-bars.png" alt="" class="mb-8">
@@ -125,12 +167,12 @@
             <h3 id="linendiagramm-heading" class="font-bold text-xl mb-2">
                 Liniendiagramme
             </h3>
-            <p class="mb-4">Liniendiagramme zeigen Trends und Veränderungen im Laufe der Zeit auf und bieten eine klare visuelle Darstellung:</p>
+            <p class="mb-4 text-muted">Liniendiagramme zeigen Trends und Veränderungen im Laufe der Zeit auf und bieten eine klare visuelle Darstellung:</p>
             
             <ul class="space-y-2 list-disc pl-12 ml-4 mb-4">
-                <li><span class="font-semibold">Einfache Liniendiagramme:</span> Verbinden Sie Datenpunkte, um Trends zu veranschaulichen, z. B. Aktienkurse oder Temperaturveränderungen.</li>
-                <li><span class="font-semibold">Mehrere Liniendiagramme:</span> Vergleichen Sie die Trends verschiedener Variablen im selben Diagramm und zeigen Sie deren Beziehungen.</li>
-                <li><span class="font-semibold">Flächendiagramme:</span> Betonen Sie die kumulierte Summe eines Wertes im Laufe der Zeit, indem Sie den Raum unter der Linie ausfüllen.</li>
+                <li class="text-muted"><span class="font-semibold">Einfache Liniendiagramme:</span> Verbinden Sie Datenpunkte, um Trends zu veranschaulichen, z. B. Aktienkurse oder Temperaturveränderungen.</li>
+                <li class="text-muted"><span class="font-semibold">Mehrere Liniendiagramme:</span> Vergleichen Sie die Trends verschiedener Variablen im selben Diagramm und zeigen Sie deren Beziehungen.</li>
+                <li class="text-muted"><span class="font-semibold">Flächendiagramme:</span> Betonen Sie die kumulierte Summe eines Wertes im Laufe der Zeit, indem Sie den Raum unter der Linie ausfüllen.</li>
             </ul>
             
             <img src="images/data-visualization-types-line.png" alt="" class="mb-8">
@@ -140,10 +182,10 @@
             <h3 id="kreisdiagramm-heading" class="font-bold text-xl mb-2">
                 Kreisdiagramme
             </h3>
-            <p class="mb-4">Tortendiagramme zeigen effektiv Teile eines Ganzen an und bieten eine klare Darstellung der Proportionen:</p>
+            <p class="mb-4 text-muted">Tortendiagramme zeigen effektiv Teile eines Ganzen an und bieten eine klare Darstellung der Proportionen:</p>
             <ul class="space-y-2 list-disc pl-12 ml-4 mb-4">
-                <li><span class="font-semibold">Standard-Tortendiagramme:</span> Unterteilen Sie einen Kreis in Segmente, von denen jedes einen Teil des Ganzen darstellt, ideal für eine kleine Anzahl von Kategorien.</li>
-                <li><span class="font-semibold">Donut-Tafeln:</span> Eine Variante mit einem Loch in der Mitte, das zusätzliche Informationen oder eine stilvolle Präsentation ermöglicht.</li>
+                <li class="text-muted"><span class="font-semibold">Standard-Tortendiagramme:</span> Unterteilen Sie einen Kreis in Segmente, von denen jedes einen Teil des Ganzen darstellt, ideal für eine kleine Anzahl von Kategorien.</li>
+                <li class="text-muted"><span class="font-semibold">Donut-Tafeln:</span> Eine Variante mit einem Loch in der Mitte, das zusätzliche Informationen oder eine stilvolle Präsentation ermöglicht.</li>
             </ul>
             
             <img src="images/data-visualization-types-pie.png" alt="" class="mb-8">
@@ -153,10 +195,10 @@
             <h3 id="streudiagramm-heading" class="font-bold text-xl mb-2">
                 Streudiagramme
             </h3>
-            <p class="mb-4">Streudiagramme helfen dabei, Beziehungen zwischen Variablen aufzudecken und fungieren als visuelle Datendetektive:</p>
+            <p class="mb-4 text-muted">Streudiagramme helfen dabei, Beziehungen zwischen Variablen aufzudecken und fungieren als visuelle Datendetektive:</p>
             <ul class="space-y-2 list-disc pl-12 ml-4 mb-4">
-                <li><span class="font-semibold">Grundlegende Streudiagramme:</span> Zeichnen Sie Datenpunkte auf, um die Korrelation zwischen zwei Variablen zu zeigen.</li>
-                <li><span class="font-semibold">Blasendiagramme:</span> Erweitern Sie Streudiagramme, indem Sie die Größe jedes Punktes zur Darstellung einer dritten Variable verwenden.</li>
+                <li class="text-muted"><span class="font-semibold">Grundlegende Streudiagramme:</span> Zeichnen Sie Datenpunkte auf, um die Korrelation zwischen zwei Variablen zu zeigen.</li>
+                <li class="text-muted"><span class="font-semibold">Blasendiagramme:</span> Erweitern Sie Streudiagramme, indem Sie die Größe jedes Punktes zur Darstellung einer dritten Variable verwenden.</li>
             </ul>
             
             <img src="images/data-visualization-types-scatter-plot.png" alt="" class="mb-8">
@@ -173,25 +215,25 @@
     </h2>
     <section id="ziel" aria-labelledby="ziel-heading">
         <h3 id="ziel-heading" class="font-bold text-xl mb-2">Überlegungen</h3>
-        <p class="mb-4"><span class="font-semibold">Verstehen Sie Ihre Daten:</span> Bevor Sie eine Visualisierung erstellen, müssen Sie die Natur Ihrer Daten analysieren. Arbeiten Sie mit Mengen oder Eigenschaften? Welche Erkenntnisse möchten Sie vermitteln? Die Art Ihrer Daten bestimmt die beste Darstellungsform: Zeitbezogene Informationen eignen sich hervorragend für Liniendiagramme, während Streudiagramme Zusammenhänge zwischen verschiedenen Variablen aufzeigen können.</p>
+        <p class="mb-4 text-muted"><span class="font-semibold">Verstehen Sie Ihre Daten:</span> Bevor Sie eine Visualisierung erstellen, müssen Sie die Natur Ihrer Daten analysieren. Arbeiten Sie mit Mengen oder Eigenschaften? Welche Erkenntnisse möchten Sie vermitteln? Die Art Ihrer Daten bestimmt die beste Darstellungsform: Zeitbezogene Informationen eignen sich hervorragend für Liniendiagramme, während Streudiagramme Zusammenhänge zwischen verschiedenen Variablen aufzeigen können.</p>
         
-        <p class="mb-4"><span class="font-semibold">Definieren Sie Ihr Ziel:</span> Überlegen Sie sich genau, welche zentrale Aussage Ihre Visualisierung transportieren soll. Möchten Sie Anteile eines Gesamtwerts verdeutlichen? Dann bietet sich ein Tortendiagramm an. Geht es hingegen um den direkten Vergleich verschiedener Kategorien, ist ein Balkendiagramm oft die wirkungsvollere Wahl.</p>
+        <p class="mb-4 text-muted"><span class="font-semibold">Definieren Sie Ihr Ziel:</span> Überlegen Sie sich genau, welche zentrale Aussage Ihre Visualisierung transportieren soll. Möchten Sie Anteile eines Gesamtwerts verdeutlichen? Dann bietet sich ein Tortendiagramm an. Geht es hingegen um den direkten Vergleich verschiedener Kategorien, ist ein Balkendiagramm oft die wirkungsvollere Wahl.</p>
         
-        <p class="mb-4"><span class="font-semibold">Berücksichtigen Sie Ihre Zielgruppe:</span> Passen Sie die Komplexität Ihrer Visualisierung an Ihr Publikum an. Während technische Fachkräfte auch detaillierte und komplexe Darstellungen verarbeiten können, bevorzugen Entscheidungsträger in der Regel klare und übersichtliche Visualisierungen. Unabhängig von Ihrer Zielgruppe gilt: Jedes Element sollte einen erkennbaren Zweck haben und zur Verständlichkeit beitragen.</p>
+        <p class="mb-4 text-muted"><span class="font-semibold">Berücksichtigen Sie Ihre Zielgruppe:</span> Passen Sie die Komplexität Ihrer Visualisierung an Ihr Publikum an. Während technische Fachkräfte auch detaillierte und komplexe Darstellungen verarbeiten können, bevorzugen Entscheidungsträger in der Regel klare und übersichtliche Visualisierungen. Unabhängig von Ihrer Zielgruppe gilt: Jedes Element sollte einen erkennbaren Zweck haben und zur Verständlichkeit beitragen.</p>
         
-        <p class="mb-4"><span class="font-semibold">Nutzen Sie interaktive Möglichkeiten:</span> Bei umfangreichen Datensätzen sollten Sie interaktive Visualisierungen in Betracht ziehen. Professionelle Tools wie Tableau oder Power BI ermöglichen es Ihren Nutzern, die Daten selbstständig zu erkunden und individuelle Einblicke zu gewinnen.</p>
+        <p class="mb-4 text-muted"><span class="font-semibold">Nutzen Sie interaktive Möglichkeiten:</span> Bei umfangreichen Datensätzen sollten Sie interaktive Visualisierungen in Betracht ziehen. Professionelle Tools wie Tableau oder Power BI ermöglichen es Ihren Nutzern, die Daten selbstständig zu erkunden und individuelle Einblicke zu gewinnen.</p>
     </section>
     
     <section id="skalenniveau" aria-labelledby="skalenniveau-heading">
         <h3 id="skalenniveau-heading" class="font-bold text-xl mb-2">
             Skalenniveau
         </h3>
-        <p class="mb-4"><span class="font-semibold">Beachten Sie das Skalenniveau:</span> Das Skalenniveau Ihrer Daten ist ein fundamentaler Faktor bei der Auswahl geeigneter Diagrammtypen. Nominale Daten wie Kategorien oder Namen eignen sich für Balken- und Tortendiagramme, ordinale Daten mit natürlicher Reihenfolge für geordnete Balkendiagramme. Intervallskalierte Daten mit gleichen Abständen aber ohne natürlichen Nullpunkt, wie Temperaturwerte, erlauben Liniendiagramme und Zeitreihenanalysen. Verhältnisskalierte Daten mit echtem Nullpunkt ermöglichen zusätzlich aussagekräftige Verhältnisberechnungen und Prozentuierungen. Die Missachtung des Skalenniveaus führt zu irreführenden oder bedeutungslosen Visualisierungen.</p>
+        <p class="mb-4 text-muted"><span class="font-semibold">Beachten Sie das Skalenniveau:</span> Das Skalenniveau Ihrer Daten ist ein fundamentaler Faktor bei der Auswahl geeigneter Diagrammtypen. Nominale Daten wie Kategorien oder Namen eignen sich für Balken- und Tortendiagramme, ordinale Daten mit natürlicher Reihenfolge für geordnete Balkendiagramme. Intervallskalierte Daten mit gleichen Abständen aber ohne natürlichen Nullpunkt, wie Temperaturwerte, erlauben Liniendiagramme und Zeitreihenanalysen. Verhältnisskalierte Daten mit echtem Nullpunkt ermöglichen zusätzlich aussagekräftige Verhältnisberechnungen und Prozentuierungen. Die Missachtung des Skalenniveaus führt zu irreführenden oder bedeutungslosen Visualisierungen.</p>
     </section>
     
     <section id="lesbarkeit" aria-labelledby="lesbarkeit-heading">
         <h3 id="lesbarkeit-heading" class="font-bold text-xl mb-2">Lesbarkeit</h3>
-        <p class="mb-4"><span class="font-semibold">Optimieren Sie die Lesbarkeit:</span> Eine durchdachte visuelle Gestaltung ist entscheidend für die Zugänglichkeit und Wirksamkeit Ihrer Diagramme. Verwenden Sie klare, gut lesbare Beschriftungen mit ausreichender Schriftgröße für Achsen, Legenden und Datenpunkte. Achten Sie auf ausreichenden Farbkontrast, insbesondere zwischen Hintergrund und Vordergrund sowie zwischen verschiedenen Datenreihen. Eine bewusst gestaltete visuelle Hierarchie lenkt den Blick auf die wichtigsten Informationen: Größere oder fettere Elemente für Hauptaussagen, dezentere Gestaltung für Sekundärinformationen. Vermeiden Sie visuelle Überfrachtung durch zu viele Farben, Muster oder unnötige dekorative Elemente, die vom Wesentlichen ablenken.</p>
+        <p class="mb-4 text-muted"><span class="font-semibold">Optimieren Sie die Lesbarkeit:</span> Eine durchdachte visuelle Gestaltung ist entscheidend für die Zugänglichkeit und Wirksamkeit Ihrer Diagramme. Verwenden Sie klare, gut lesbare Beschriftungen mit ausreichender Schriftgröße für Achsen, Legenden und Datenpunkte. Achten Sie auf ausreichenden Farbkontrast, insbesondere zwischen Hintergrund und Vordergrund sowie zwischen verschiedenen Datenreihen. Eine bewusst gestaltete visuelle Hierarchie lenkt den Blick auf die wichtigsten Informationen: Größere oder fettere Elemente für Hauptaussagen, dezentere Gestaltung für Sekundärinformationen. Vermeiden Sie visuelle Überfrachtung durch zu viele Farben, Muster oder unnötige dekorative Elemente, die vom Wesentlichen ablenken.</p>
     </section>
 </section>
 
@@ -200,22 +242,22 @@
     
     <section id="a-f" aria-labelledby="a-f-heading">
         <h3 id="a-f-heading" class="font-bold text-xl mb-2">A–F</h3>
-        <p class="mb-4">Begriffe von A bis F.</p>
+        <p class="mb-4 text-muted">Begriffe von A bis F.</p>
     </section>
     
     <section id="g-l" aria-labelledby="g-l-heading">
         <h3 id="g-l-heading" class="font-bold text-xl mb-2">G–L</h3>
-        <p class="mb-4">Begriffe von G bis L.</p>
+        <p class="mb-4 text-muted">Begriffe von G bis L.</p>
     </section>
     
     <section id="m-r" aria-labelledby="m-r-heading">
         <h3 id="m-r-heading" class="font-bold text-xl mb-2">M–R</h3>
-        <p class="mb-4">Begriffe von M bis R.</p>
+        <p class="mb-4 text-muted">Begriffe von M bis R.</p>
     </section>
     
     <section id="s-z" aria-labelledby="s-z-heading">
         <h3 id="s-z-heading" class="font-bold text-xl mb-2">S–Z</h3>
-        <p class="mb-4">Begriffe von S bis Z.</p>
+        <p class="mb-4 text-muted">Begriffe von S bis Z.</p>
     </section>
 </section>
 </main>
