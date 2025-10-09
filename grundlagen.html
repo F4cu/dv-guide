@@ -6,11 +6,6 @@
     <title>Grundlagen – Barrierefreie Datenvisualisierung</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 <body id="grundlagen" class="bg-white text-gray-900 min-h-screen">
     <header role="banner" class="bg-white border-b border-primary">
@@ -31,9 +26,9 @@
                 <!-- Desktop Navigation -->
                 <ul class="nav-items hidden md:flex gap-8 list-none m-0 p-0">
                     <li class="nav-selected"><a href="#grundlagen" class="text-gray-700 hover:text-primary no-underline">Grundlagen</a></li>
-                    <li><a href="#datenvisualisierungen" class="text-gray-700 hover:text-primary no-underline">Datenvisualisierungen</a></li>
-                    <li><a href="#barrierefreiheit" class="text-gray-700 hover:text-primary no-underline">Barrierefreiheit</a></li>
-                    <li><a href="#farbpaletten" class="text-gray-700 hover:text-primary no-underline">Farbpaletten</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-primary no-underline">Datenvisualisierungen</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-primary no-underline">Barrierefreiheit</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-primary no-underline">Farbpaletten</a></li>
                 </ul>
                 
                 <!-- Mobile Menu Button -->
@@ -51,7 +46,7 @@
     <div class="flex">
         <!-- Sidebar -->
         <aside
-        class="w-[300px] bg-light-blue p-8 sticky top-0 h-screen overflow-y-auto"
+        class="w-[300px] bg-light-blue p-8 sticky top-0 h-screen overflow-y-auto hidden md:block"
         aria-label="Seiten Navigation"
         >
         <nav class="text-sm mb-8">
@@ -85,7 +80,7 @@
     </aside>
     
     <!-- Main content -->
-    <main id="main-content" class="flex-1 bg-white px-12 max-w-3xl" role="main">
+    <main id="main-content" class="flex-1 bg-white px-6 md:px-12 max-w-3xl" role="main">
         <section
         id="grundlegende-diagramme"
         aria-labelledby="grundlegende-diagramme-heading"
