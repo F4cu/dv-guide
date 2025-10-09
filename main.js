@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  console.log("✅ Sidebar marker script loaded");
-
   // Startseite
   const accordionButtons = document.querySelectorAll(".accordion-button");
 
