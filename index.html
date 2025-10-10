@@ -75,7 +75,7 @@
                 <button
                     id="theme-toggle"
                     title="Dunkelmodus einschalten"
-                    class="p-2 transition color-icon hidden md:block"
+                    class="p-2 transition color-icon hidden lg:block"
                     aria-label="Dunkelmodus einschalten"
                     >
                     <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -93,10 +93,10 @@
                 </button>
 
                 <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn text-primary block md:hidden" aria-label="Menü öffnen"
+                <button class="mobile-menu-btn color-icon block md:hidden" aria-label="Menü öffnen"
                     aria-expanded="false">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        stroke-width="4" stroke-linecap="square" stroke-linejoin="round">
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -111,9 +111,9 @@
         <section id="grundlagen" class="hero content-end">
             <div class="container-custom px-4 md:px-8">
                 <div class="hero-content mb-4 p-4 text-inverted w-full sm:max-w-md sm:mb-8 sm:p-8">
-                    <h1 id="hero-heading" class="font-bold text-2xl sm:text-3xl mb-4" tabindex="-1">Guide für barrierefreie
+                    <h1 id="hero-heading" class="font-bold leading-7 text-2xl sm:text-3xl mb-4" tabindex="-1">Guide für barrierefreie
                         Datenvisualisierung</h1>
-                    <p class="">Entdecke Best Practices, praxisnahe Vorlagen und fundierte
+                    <p class="leading-7">Entdecke Best Practices, praxisnahe Vorlagen und fundierte
                         Grundlagen, um Daten klar, verständlich und für alle Menschen zugänglich darzustellen.</p>
                 </div>
             </div>
@@ -137,11 +137,11 @@
                         </div>
                         <div class="flex flex-col">
                             <h2 class="text-xl font-bold mb-1">Grundlegende Diagramme</h2>
-                            <p class="text-muted mb-3">
+                            <p class="text-muted mb-3 leading-7">
                                 Verstehen, wie man grundlegende Diagramme verwenden können.
                             </p>
-                            <a href="grundlagen.html" aria-label="Mehr über grundlegende Diagramme erfahren" class="btn-primary mt-auto self-start">
-                                Weiterlesen
+                            <a href="grundlagen.html" aria-label="Mehr über grundlegende Diagramme erfahren" class="btn-primary leading-none  mt-auto self-start">
+                                Zu Diagrammen
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -167,11 +167,11 @@
                         </div>
                         <div class="flex flex-col">
                             <h2 class="text-xl font-bold mb-1">Diagrammwahl Prinzipen</h2>
-                            <p class="text-muted mb-3">
+                            <p class="text-muted mb-3 leading-7">
                                 Kriterien zur Auswahl des passenden Diagrammtyps je nach Kontext.
                             </p>
-                            <a href="grundlagen.html#diagrammwahl-prinzipen" aria-label="Mehr über Auswahl des Diagramms erfahren" class="btn-primary mt-auto self-start">
-                                Weiterlesen
+                            <a href="grundlagen.html#diagrammwahl-prinzipen" aria-label="Mehr über Auswahl des Diagramms erfahren" class="btn-primary leading-none  mt-auto self-start">
+                                Zu Prinzipen
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -197,11 +197,11 @@
                         </div>
                         <div class="flex flex-col">
                             <h2 class="text-xl font-bold mb-1">Glossar</h2>
-                            <p class="text-muted mb-3">
+                            <p class="text-muted mb-3 leading-7">
                                 Wichtige Begriffe und Definitionen rund um Datenvisualisierung.
                             </p>
-                            <a href="grundlagen.html#glossar" aria-label="Mehr über das Datenvisualisierungsglossar" class="btn-primary mt-auto self-start">
-                                Weiterlesen
+                            <a href="grundlagen.html#glossar" aria-label="Mehr über das Datenvisualisierungsglossar" class="btn-primary leading-none  mt-auto self-start">
+                                Zu Begriffe
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -230,11 +230,11 @@
                         </div>
                         <div class="order-2 md:order-2 flex flex-col min-w-md">
                             <h3 class="text-xl font-bold mb-1">Anatomie</h3>
-                            <p class="text-muted mb-4">Die Anatomie von Datenvisualisierung verstehen: Zentrale
-                                Elemente und Begriffe für effektive Zusammenarbeit im Team.</p>
-                            <a href="#" class="btn-primary mt-auto self-start"
+                            <p class="text-muted mb-4 leading-7">Die Anatomie von Datenvisualisierung verstehen: Zentrale
+                                Elemente und Begriffe für effektive Zusammenarbeit.</p>
+                            <a href="#" class="btn-primary leading-none  mt-auto self-start"
                                 aria-label="Mehr über Anwendung Kontext">
-                                Weiterlesen
+                                Anatomie ansehen
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -252,11 +252,10 @@
                         </div>
                         <div class="order-2 md:order-2 flex flex-col min-w-md">
                             <h3 class="text-xl font-bold mb-1">Anwendung Kontext</h3>
-                            <p class="text-muted mb-4">Berücksichtigung von Medium und Zweck bei der Visualisierung
-                                von Daten wie zum Beispiel Exploration Views und Dashboards.</p>
-                            <a href="#" class="btn-primary mt-auto self-start"
+                            <p class="text-muted mb-4 leading-7">Berücksichtigung von Medium und Zweck bei der Datenvisualisierung wie Exploration Views und Dashboards.</p>
+                            <a href="#" class="btn-primary leading-none  mt-auto self-start"
                                 aria-label="Mehr über Anwendung Kontext">
-                                Weiterlesen
+                                Zu Anwendungsfälle
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -275,11 +274,11 @@
                         </div>
                         <div class="order-2 md:order-2 flex flex-col min-w-md">
                             <h3 class="text-xl font-bold mb-1">Komplexe Diagramme</h3>
-                            <p class="text-muted mb-4">Anwendungsfälle für spezifische Diagramme wie Heatmaps,
+                            <p class="text-muted mb-4 leading-7">Anwendungsfälle für spezifische Diagramme wie Heatmaps,
                                 Baumkarten, Blasendiagramme und Netzwerkgraphen.</p>
-                            <a href="#" class="btn-primary mt-auto self-start"
+                            <a href="#" class="btn-primary leading-none  mt-auto self-start"
                                 aria-label="Mehr über Komplexe Diagramme">
-                                Weiterlesen
+                                Zu Diagrammen
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -298,10 +297,10 @@
                         </div>
                         <div class="order-2 md:order-2 flex flex-col min-w-md">
                             <h3 class="text-xl font-bold mb-1">Vorlagen</h3>
-                            <p class="text-muted mb-4">Praktische Templates für barrierefreie
+                            <p class="text-muted mb-4 leading-7">Praktische Mustern für
                                 Datenvisualisierungsprojekte, ideal für verschiedene Branchen und Anwendungsfälle.</p>
-                            <a href="#" class="btn-primary mt-auto self-start" aria-label="Mehr über Vorlagen">
-                                Weiterlesen
+                            <a href="#" class="btn-primary leading-none  mt-auto self-start" aria-label="Mehr über Vorlagen">
+                                Vorlagen suchen
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -324,14 +323,14 @@
                     <!-- Left Column -->
                     <div class="">
                         <h3 class="text-xl font-bold mb-2">Was ist digitale Barrierefreiheit?</h3>
-                        <p class="text-muted mb-4">Digitale Barrierefreiheit bedeutet, dass digitale Angebote für
+                        <p class="text-muted mb-4 leading-7">Digitale Barrierefreiheit bedeutet, dass digitale Angebote für
                             alle Menschen zugänglich sind. Entsprechend sind die Web Content Accessibility Guidelines
                             (WCAG), die technische und gestalterische Anforderungen definieren.</p>
-                        <p class="text-muted mb-4">Das umfasst Menschen mit Seh-, Hör- und motorischen
+                        <p class="text-muted mb-4 leading-7">Das umfasst Menschen mit Seh-, Hör- und motorischen
                             Beeinträchtigungen, kognitiven Einschränkungen oder auch temporären Hindernissen, wie z. B.
                             einem gebrochenen Arm.</p>
-                        <a href="#" class="btn-primary" aria-label="Weiterlesen über digitale Barrierefreiheit">
-                            Weiterlesen
+                        <a href="#" class="btn-primary leading-none" aria-label="Weiterlesen über digitale Barrierefreiheit">
+                            Mehr zur Barrierefreiheit
                             <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -346,7 +345,7 @@
                         <div class="border-t accordion-divider">
                             <button class="accordion-button w-full p-4 flex items-center justify-between text-left"
                                 aria-expanded="false" aria-controls="accordion-1" id="accordion-button-1">
-                                <span class="text-xl font-bold">Warum ist Barrierefreiheit wichtig?</span>
+                                <h3 class="text-xl font-bold">Warum ist Barrierefreiheit wichtig?</h3>
                                 <svg class="plus color-icon" aria-hidden="true" width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16 7V25M25 16H7" stroke="currentColor" stroke-width="2" stroke-linecap="square"
@@ -361,7 +360,7 @@
                             <div class="accordion-content" id="accordion-1" role="region"
                                 aria-labelledby="accordion-button-1">
                                 <div class="pb-6 pr-8">
-                                    <p class="px-4 text-muted">Digitale Barrierefreiheit ist essenziell, um allen
+                                    <p class="px-4 text-muted leading-7">Digitale Barrierefreiheit ist essenziell, um allen
                                         Menschen, unabhängig von Einschränkungen, gleichberechtigten Zugang zu digitalen
                                         Inhalten zu ermöglichen und soziale Teilhabe zu fördern.</p>
                                 </div>
@@ -371,7 +370,7 @@
                         <div class="border-t accordion-divider">
                             <button class="accordion-button w-full p-4 flex items-center justify-between text-left"
                                 aria-expanded="false" aria-controls="accordion-2" id="accordion-button-2">
-                                <span class="text-xl font-bold">Web Readers</span>
+                                <h3 class="text-xl font-bold">Web Readers</h3>
                                 <svg class="plus color-icon" aria-hidden="true" width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16 7V25M25 16H7" stroke="currentColor" stroke-width="2" stroke-linecap="square"
@@ -386,7 +385,7 @@
                             <div class="accordion-content" id="accordion-2" role="region"
                                 aria-labelledby="accordion-button-2">
                                 <div class="pb-6 pr-8">
-                                    <p class="px-4 text-muted">Web Readers sind Technologien wie Screenreader, die
+                                    <p class="px-4 text-muted leading-7">Web Readers sind Technologien wie Screenreader, die
                                         Webinhalte für Menschen mit Sehbehinderungen vorlesen. Sie interpretieren
                                         HTML-Strukturen, Alt-Texte und <a class="text-link underline hover:no-underline"
                                             href="">ARIA-Labels</a> für barrierefreie Navigation.</p>
@@ -397,7 +396,7 @@
                         <div class="border-t border-b accordion-divider">
                             <button class="accordion-button w-full p-4 flex items-center justify-between text-left"
                                 aria-expanded="false" aria-controls="accordion-3" id="accordion-button-3">
-                                <span class="text-xl font-bold">Tools</span>
+                                <h3 class="text-xl font-bold">Tools</h3>
                                 <svg class="plus color-icon" aria-hidden="true" width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16 7V25M25 16H7" stroke="currentColor" stroke-width="2" stroke-linecap="square"
@@ -412,7 +411,7 @@
                             <div class="accordion-content" id="accordion-3" role="region"
                                 aria-labelledby="accordion-button-3">
                                 <div class="pb-6 pr-8">
-                                    <p class="px-4 text-muted">Entdecke verschiedene <a href="#"
+                                    <p class="px-4 text-muted leading-7">Entdecke verschiedene <a href="#"
                                             class="text-link underline hover:no-underline">Barrierefreiheit-Checker-Tools</a>:
                                         Browser-Extensions wie WAVE und axe, Farb- und Kontrast-Checker für Figma sowie
                                         automatisierte Testing-Tools für A11y-Optimierung.</p>
@@ -435,11 +434,11 @@
                         <img src="images/card-colorpalette.png" alt="Beispiel grundlegende Farbpaletten">
                         <div class="card-content p-6">
                             <h3 class="text-xl font-bold mb-1">Farbpalettentypen</h3>
-                            <p class="text-muted mb-4">Erfahren Sie mehr über die verschiedenen Arten von
+                            <p class="text-muted mb-4 leading-7">Erfahren Sie mehr über die verschiedenen Arten von
                                 Farbpaletten.</p>
-                            <a href="#" class="btn-primary mt-auto self-start"
+                            <a href="#" class="btn-primary leading-none  mt-auto self-start"
                                 aria-label="Mehr über Farbpalettentypen">
-                                Weiterlesen
+                                Palettentypen
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -455,11 +454,10 @@
                         <img src="images/card-accessibility.png" alt="Barrierefreiheit Symbole und Farben">
                         <div class="card-content p-6">
                             <h3 class="text-xl font-bold mb-1">Barrierefreie Farben</h3>
-                            <p class="text-muted mb-4">Erstelle barrierefreie Farbpaletten für verschiedene Arten
-                                von Diagrammen.</p>
-                            <a href="#" class="btn-primary mt-auto self-start"
+                            <p class="text-muted mb-4 leading-7">Erstelle barrierefreie Farbpaletten für Diagramme.</p>
+                            <a href="#" class="btn-primary leading-none  mt-auto self-start"
                                 aria-label="Mehr über Farben und Barrierefreiheit">
-                                Weiterlesen
+                                Farben prüfen
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -475,11 +473,11 @@
                         <img src="images/card-bestpractices.png" alt="Do's und Don'ts Illustration">
                         <div class="card-content p-6">
                             <h3 class="text-xl font-bold mb-1">Best Practices</h3>
-                            <p class="text-muted mb-4">Praktische Leitlinien für eine effektive Umsetzung und
+                            <p class="text-muted mb-4 leading-7">Praktische Leitlinien für eine effektive Umsetzung und
                                 Gestaltung.</p>
-                            <a href="#" class="btn-primary mt-auto self-start"
+                            <a href="#" class="btn-primary leading-none  mt-auto self-start"
                                 aria-label="Mehr über Best Practices">
-                                Weiterlesen
+                                Tipps ansehen
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -532,7 +530,7 @@
 
             <!-- Footer Text -->
             <div class="flex justify-between flex-wrap items-start">
-                <p class="text-sm text-muted max-w-2xl mb-6">DV Guide ermöglicht eine gemeinsame Sprache und
+                <p class="text-sm text-muted max-w-2xl mb-6 leading-5">DV Guide ermöglicht eine gemeinsame Sprache und
                     einheitliche Vorgehensweise für die Entwicklung von Anwendungen. So können Teams effizient arbeiten
                     und Barrierefreiheit von Anfang an integrieren.</p>
                 <p class="text-sm text-muted">2025 DV Guide&#174;</p>
