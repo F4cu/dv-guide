@@ -54,7 +54,7 @@ body {
 }
 
 p, h1, h2, h3, li, .btn-primary {
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     word-spacing: 0.16rem;
 }
 
