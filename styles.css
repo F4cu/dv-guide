@@ -1,5 +1,6 @@
 
 :root {
+  --blue-50: #EFF6FF;
   --blue-100: #E9F2FC;
   --blue-200: #BCD8F6;
   --blue-300: #62A5EA;
@@ -36,6 +37,27 @@
   --color-button: var(--color-primary);
   --color-button-hover: var(--blue-700);
   --color-logo: var(--blue-600);
+
+  /* Typography legibility base */
+  --letter-spacing: 0.05em;
+  --word-spacing: 0.15em;
+  --line-height: 1.6;
+}
+
+.high-contrast {
+  --color-button: var(--blue-700);
+  --color-background-hero: var(--blue-700);
+  --color-icon: var(--blue-700) !important;
+  --color-border-primary: var(--blue-700);
+  --color-logo: var(--blue-700);
+  --color-background-footer: var(--blue-700);
+  --color-background-elevated: var(--blue-50);
+  --color-text-muted: #1a1a1a;
+  
+  /* AAA legibility boost (survives user spacing overrides) */
+  --letter-spacing: 0.12em;
+  --word-spacing: 0.16em;
+  --line-height: 1.7;
 }
 
 html {
@@ -48,14 +70,14 @@ body {
     font-weight: 500;
     font-style: normal;
     font-size: 1.125rem;
-    line-height: 1.625rem;
+    line-height: var(--line-height);
     color: var(--color-text);
     background-color: var(--color-background-container);
 }
 
 p, h1, h2, h3, li, .btn-primary {
-    letter-spacing: 0.05rem;
-    word-spacing: 0.16rem;
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
 }
 
 header {

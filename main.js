@@ -104,10 +104,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const iconSun = document.getElementById('icon-sun');
   const iconMoon = document.getElementById('icon-moon');
 
+  // High contrast toggle (AAA legibility boost)
+  const contrastToggle = document.getElementById('contrast-toggle');
+  let highContrastOn = false;
+
+  // Function to sync high contrast with theme
+  function syncHighContrastWithTheme(theme) {
+    const wasOn = document.body.classList.contains('high-contrast');
+    
+    if (theme === 'dark') {
+      // Hide high contrast button and reset to normal
+      if (contrastToggle) {
+        contrastToggle.style.display = 'none';
+      }
+      if (wasOn) {
+        document.body.classList.remove('high-contrast');
+        localStorage.setItem('high-contrast', 'off');
+        highContrastOn = false;
+      }
+    } else {
+      // Show high contrast button (light theme only)
+      if (contrastToggle) {
+        contrastToggle.style.display = 'block';
+      }
+    }
+  }
+
   // Apply saved theme or default to light
   const savedTheme = localStorage.getItem('theme') || 'light';
   html.setAttribute('data-theme', savedTheme);
   updateToggle(savedTheme);
+  syncHighContrastWithTheme(savedTheme); // Sync on load
 
   toggle.addEventListener('click', () => {
     const currentTheme = html.getAttribute('data-theme');
@@ -115,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateToggle(newTheme);
+    syncHighContrastWithTheme(newTheme); // Sync on toggle
   });
 
   function updateToggle(theme) {
@@ -131,4 +159,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // High contrast toggle logic (light theme only)
+  if (contrastToggle && html.getAttribute('data-theme') === 'light') {
+    // Apply saved high-contrast state or default off
+    const savedContrast = localStorage.getItem('high-contrast') || 'off';
+    if (savedContrast === 'on') {
+      document.body.classList.add('high-contrast');
+      highContrastOn = true;
+    }
+
+    contrastToggle.addEventListener('click', () => {
+      const isOn = document.body.classList.contains('high-contrast');
+      const newState = isOn ? 'off' : 'on';
+      
+      if (newState === 'on') {
+        document.body.classList.add('high-contrast');
+        highContrastOn = true;
+      } else {
+        document.body.classList.remove('high-contrast');
+        highContrastOn = false;
+      }
+      
+      localStorage.setItem('high-contrast', newState);
+      contrastToggle.setAttribute('aria-label', newState === 'on' 
+        ? 'High contrast mode ausschalten' 
+        : 'High contrast mode einschalten');
+    });
+  }
 });
